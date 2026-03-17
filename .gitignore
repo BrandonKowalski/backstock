@@ -1,0 +1,9 @@
+backstock.db
+backstock.db-wal
+backstock.db-shm
+*.exe
+/backstock
+frontend/node_modules/
+frontend/dist/
+.idea/
+*.iml

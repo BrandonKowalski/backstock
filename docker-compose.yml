@@ -1,0 +1,11 @@
+services:
+  backstock:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - backstock-data:/data
+    restart: unless-stopped
+
+volumes:
+  backstock-data:

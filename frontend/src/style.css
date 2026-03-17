@@ -1,0 +1,96 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: oklch(1 0 0);
+  --color-foreground: oklch(0.145 0 0);
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(0.145 0 0);
+  --color-popover: oklch(1 0 0);
+  --color-popover-foreground: oklch(0.145 0 0);
+  --color-primary: oklch(0.205 0 0);
+  --color-primary-foreground: oklch(0.985 0 0);
+  --color-secondary: oklch(0.97 0 0);
+  --color-secondary-foreground: oklch(0.205 0 0);
+  --color-muted: oklch(0.97 0 0);
+  --color-muted-foreground: oklch(0.556 0 0);
+  --color-accent: oklch(0.97 0 0);
+  --color-accent-foreground: oklch(0.205 0 0);
+  --color-destructive: oklch(0.577 0.245 27.325);
+  --color-destructive-foreground: oklch(0.577 0.245 27.325);
+  --color-border: oklch(0.922 0 0);
+  --color-input: oklch(0.922 0 0);
+  --color-ring: oklch(0.708 0 0);
+  --color-status-expired: oklch(0.505 0.213 27.325);
+  --color-status-expiring: oklch(0.554 0.135 66.442);
+  --color-status-bestby: oklch(0.553 0.148 56.942);
+  --color-status-stale: oklch(0.496 0.165 303.9);
+  --color-status-replenish: oklch(0.553 0.175 48.717);
+  --color-status-oos: oklch(0.556 0 0);
+  --color-tag-food: oklch(0.553 0.175 48.717);
+  --color-tag-food-bg: oklch(0.96 0.04 48.717);
+  --color-tag-nonfood: oklch(0.488 0.132 254.5);
+  --color-tag-nonfood-bg: oklch(0.96 0.04 254.5);
+  --color-tag-both: oklch(0.556 0 0);
+  --color-tag-both-bg: oklch(0.97 0 0);
+  --radius: 0.625rem;
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--reka-accordion-content-height); }
+  }
+  @keyframes accordion-up {
+    from { height: var(--reka-accordion-content-height); }
+    to { height: 0; }
+  }
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: oklch(0.145 0 0);
+    --color-foreground: oklch(0.985 0 0);
+    --color-card: oklch(0.205 0 0);
+    --color-card-foreground: oklch(0.985 0 0);
+    --color-popover: oklch(0.205 0 0);
+    --color-popover-foreground: oklch(0.985 0 0);
+    --color-primary: oklch(0.985 0 0);
+    --color-primary-foreground: oklch(0.205 0 0);
+    --color-secondary: oklch(0.269 0 0);
+    --color-secondary-foreground: oklch(0.985 0 0);
+    --color-muted: oklch(0.269 0 0);
+    --color-muted-foreground: oklch(0.708 0 0);
+    --color-accent: oklch(0.269 0 0);
+    --color-accent-foreground: oklch(0.985 0 0);
+    --color-destructive: oklch(0.577 0.245 27.325);
+    --color-destructive-foreground: oklch(0.577 0.245 27.325);
+    --color-border: oklch(0.369 0 0);
+    --color-input: oklch(0.369 0 0);
+    --color-ring: oklch(0.556 0 0);
+    --color-status-expired: oklch(0.637 0.237 25.331);
+    --color-status-expiring: oklch(0.681 0.162 75.834);
+    --color-status-bestby: oklch(0.666 0.179 58.318);
+    --color-status-stale: oklch(0.627 0.192 303.9);
+    --color-status-replenish: oklch(0.666 0.179 48.717);
+    --color-status-oos: oklch(0.708 0 0);
+    --color-tag-food: oklch(0.666 0.179 48.717);
+    --color-tag-food-bg: oklch(0.3 0.06 48.717);
+    --color-tag-nonfood: oklch(0.627 0.155 254.5);
+    --color-tag-nonfood-bg: oklch(0.3 0.06 254.5);
+    --color-tag-both: oklch(0.708 0 0);
+    --color-tag-both-bg: oklch(0.269 0 0);
+  }
+}

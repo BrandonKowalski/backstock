@@ -1,0 +1,10 @@
+backstock.db*
+backstock.db*
+frontend/node_modules
+frontend/dist
+.git
+.idea
+*.iml
+*.test
+__debug_bin*
+tmp/
